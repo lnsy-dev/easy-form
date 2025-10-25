@@ -1,8 +1,8 @@
 {
-  "name": "easy-form",
+  "name": "@lnsy/easy-form",
   "version": "0.0.1",
-  "description": "A context engineering boilerplate for generating custom HTML Elements",
-  "main": "index.js",
+  "description": "A simple, vanilla JavaScript form library built with custom HTML elements",
+  "main": "dist/easy-form.min.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:lnsy-dev/easy-form.git"
@@ -21,7 +21,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "rspack serve",
-    "build": "rspack build"
+    "build": "rspack build",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "dataroom-js": "^0.6.0"
@@ -38,9 +39,11 @@
     "style-loader": "^4.0.0"
   },
   "files": [
-    "dist/main.min.js",
+    "dist/",
+    "src/",
+    "index.js",
     "index.css",
-    "styles/variables.css",
-    "src/"
+    "README.md",
+    "LICENSE"
   ]
 }

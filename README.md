@@ -4,32 +4,34 @@ A simple, vanilla JavaScript form library built with custom HTML elements. Easy 
 
 ## Installation
 
-Clone the repository and install dependencies:
+```bash
+npm install easy-form
+```
+
+## Usage in Your Project
+
+Import the library in your JavaScript (CSS is already bundled):
+
+```javascript path=null start=null
+import 'easy-form';
+```
+
+Or include the built file directly:
+
+```html path=null start=null
+<script src="node_modules/easy-form/dist/easy-form.min.js"></script>
+```
+
+## Development
+
+To contribute or run the project locally:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/lnsy-dev/easy-form.git
 npm install
+npm run start  # Starts dev server
+npm run build  # Creates production build
 ```
-
-## Running the Project
-
-To run the project in development mode:
-
-```bash
-npm run start
-```
-
-This starts a development server on port 3000 (configurable via `.env`).
-
-## Building the Project
-
-To build for production:
-
-```bash
-npm run build
-```
-
-This creates a `dist` folder with bundled and optimized files.
 
 ## Usage
 

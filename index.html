@@ -27,12 +27,19 @@
   </style>
 </head>
 <body>
-<easy-form>
+<easy-form id="easy_input">
   <easy-input type="email" name="email" label="E-Mail" required></easy-input>
-  <easy-input type="textarea" name="textarea-test" required="true"></easy-input>
+  <easy-input type="date" name="textarea-test" required="true"></easy-input>
   <easy-input type="submit"></easy-input>
 </easy-form>
 
+<script>
+  setTimeout(()=>{
+    easy_input.on("submit", (values) => {
+      console.log(values);
+    })
+  }, 3000)
+</script>
 
 </body>
 </html>
