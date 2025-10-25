@@ -1,6 +1,6 @@
 # Easy Form
 
-A simple, vanilla JavaScript form library built with custom HTML elements. Easy Form provides automatic validation, smart submit button management, and type-safe form value extraction.
+Slightly opinionated custom elements to make HTML forms just a bit easier to use.
 
 ## Installation
 
@@ -8,29 +8,39 @@ A simple, vanilla JavaScript form library built with custom HTML elements. Easy 
 npm install easy-form
 ```
 
+Or include via CDN:
+
+```html path=null start=null
+<script src="https://unpkg.com/@lnsy/easy-form/dist/easy-form.min.js"></script>
+```
+
+
 ## Usage in Your Project
 
 Import the library in your JavaScript (CSS is already bundled):
 
-```javascript path=null start=null
+```javascript
 import 'easy-form';
 ```
 
-Or include the built file directly:
+or if you use a CDN you can just use the custom html elements: 
 
-```html path=null start=null
-<script src="node_modules/easy-form/dist/easy-form.min.js"></script>
-```
+```html
+<easy-form id="easy_form">
+  <easy-input type="email" name="email" required></easy-input>
+  <easy-input type="submit"></easy-input>
+</easy-form>
 
-## Development
+<script>
+  // setTimeout is to ensure the document is loaded before trying
+  // to attach the event
+  setTimeout(() => {
+  easy_form.on("submit", (values) => {
+    console.log(values.email)
+  });
+  }, 0)
+</script>
 
-To contribute or run the project locally:
-
-```bash
-git clone https://github.com/lnsy-dev/easy-form.git
-npm install
-npm run start  # Starts dev server
-npm run build  # Creates production build
 ```
 
 ## Usage
@@ -302,6 +312,17 @@ easy-form {
 </script>
 ```
 
+## Development
+
+To contribute or run the project locally:
+
+```bash
+git clone https://github.com/lnsy-dev/easy-form.git
+npm install
+npm run start  # Starts dev server
+npm run build  # Creates production build
+```
+
 ## Configuration
 
 Customize the build output using a `.env` file:
@@ -310,3 +331,5 @@ Customize the build output using a `.env` file:
 OUTPUT_FILE_NAME=easy-form.min.js
 PORT=8080
 ```
+
+
