@@ -52,5 +52,22 @@
 
 */
 
+easy-input {
+  display: block;
+  width: 100%;
+}
 
-@import "./styles/variables.css";
+easy-form {
+  display: flex;
+  flex-direction: column;
+}
+
+easy-form label {
+  display: block;
+}
+
+easy-form textarea, easy-form input {
+  box-sizing: border-box;
+  width: 100%;
+}
+
