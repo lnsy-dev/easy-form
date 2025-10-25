@@ -13,10 +13,11 @@ class EasyInput extends DataroomElement {
     switch(this.attrs.type){
       case "submit":
         this.submit = this.create('input', { class: 'easy-input submit', type:'submit', name:this.attrs.name});
-        break
+        break;
       case "textarea":
         this.label = this.create('label', { class: 'easy-label', for: this.attrs.name, content: label_content});
         this.input = this.create('textarea', { class: 'easy-input', name: this.attrs.name});
+        break;
       default: 
         this.label = this.create('label', { class: 'easy-label', for:this.attrs.name, content: label_content});
         this.input = this.create('input', { class: 'easy-input', name:this.attrs.name, type: this.attrs.type});

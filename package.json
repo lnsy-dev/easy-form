@@ -1,24 +1,23 @@
 {
-  "name": "pochade-js",
-  "version": "0.4.0",
+  "name": "easy-form",
+  "version": "0.0.1",
   "description": "A context engineering boilerplate for generating custom HTML Elements",
-  "main": "dist/main.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lnsy-dev/pochade-js.git"
+    "url": "git@github.com:lnsy-dev/easy-form.git"
   },
   "keywords": [
-    "Context",
-    "Engineering",
-    "Vanilla",
+    "forms",
+    "Vanilla JS",
     "Js"
   ],
   "author": "LNSY",
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/lnsy-dev/pochade-js/issues"
+    "url": "https://github.com/lnsy-dev/easy-form/issues"
   },
-  "homepage": "https://github.com/lnsy-dev/pochade-js#readme",
+  "homepage": "https://github.com/lnsy-dev/easy-form#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "rspack serve",
